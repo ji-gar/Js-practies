@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var number1
+            var number2
+
+             function getUserInput()
+             {
+                number1 = parseInt(prompt("Enter number 1"))
+                number2=parseInt(prompt("Enter number 2"))
+             }
+             function getMul()
+             {
+                getUserInput()
+                alert(`your ans is ${number1*number2}`)
+             }
+             function getPlus()
+             {
+                getUserInput()
+                alert(`your ans is ${number1+number2}`)
+             }
+             function getMinus()
+             {
+                getUserInput()
+                alert(`your ans is ${number1+number2}`)
+             }
+             function getDivided()
+             {
+                getUserInput()
+                if(number2==0)
+                {
+                    alert("Can not divided by zero ")
+                }
+                else{
+                    alert(`your ans is ${number1/number2}`)
+                }
+                
+
+             }
+              
+        </script>
+    </head>
+    <body>
+
+         <input type="button" value="Take input" onclick="getUserInput()"/>
+         <input type="button" value="+" onclick="getPlus()"/>
+         <input type="button" value="-" onclick="getMinus()" />
+         <input type="button" value="*"onclick="getMul()" />
+         <input type="button" value="/" onclick="getDivided()"/>
+
+    </body>
+</html>

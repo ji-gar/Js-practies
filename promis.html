@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            console.log("the js part is statred")
+    
+             function getInformation(isInfo)
+             {
+                return new Promise((resolve,reject)=>{
+
+                    if(isInfo)
+                    {
+                      resolve("avilable data")
+                    }
+                    else{
+                        reject("not avialbe")
+                    }
+                    
+                })
+             }
+             function getMoreinfo(isMoreInfo)
+             {
+
+                return new Promise((resolve,reject)=>{
+                    if(isMoreInfo)
+                    {
+                      resolve(" more avilable data")
+                    }
+                    else{
+                        reject("not avialbe")
+                    }
+                })
+             }
+                   
+   async   function getAlldata()
+              {
+                try{
+                    console.log(1)
+                    console.log( await getInformation(true))
+                // let ans=await getInformation(true)
+                
+               
+                }
+                catch(execption)
+                {
+                    console.log(execption)
+                }
+                
+              }
+              getAlldata()
+              //IT CALL FIRST BEFORE 
+              console.log(2)
+                console.log(3)
+
+            //   function getOrders(isOrders)
+            //   {
+            //     return new Promise((resolve,reject)=>{
+            //        if(isOrders)
+            //        {
+            //         resolve("Sucessful payment")
+            //        }
+            //        else{
+            //         reject("sorry can not create your order right ")
+            //        }
+            //     })
+            //   }
+
+            //   function processtopayment(isPaymentdone)
+            //   {
+
+            //     return new Promise((resolve,reject)=>{
+            //       if(isPaymentdone)
+            //       {
+            //           resolve("payment is done")
+            //       }
+            //       else{
+            //         reject("payment is not done")
+            //       }
+            //     })
+            //   }
+            //   getOrders(true).then((result)=>{
+            //      console.log(result)
+            //      processtopayment(false).then((ans)=>{
+            //         console.log(ans)
+            //      }).catch((ans)=>{
+            //         console.log(ans)
+            //      })
+            //   }).catch((result)=>{
+            //     console.log(result)
+            //   })
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
